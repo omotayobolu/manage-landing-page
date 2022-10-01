@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Be Vietnam Pro, sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  p {
+    @apply text-darkGrayishBlue;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-darkBlue;
+  }
+
+  button {
+    @apply bg-brightRed  text-sm text-white border-none rounded-3xl py-3 px-6 tracking-wide cursor-pointer drop-shadow-lg;
+  }
+}
