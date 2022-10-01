@@ -4,20 +4,20 @@ import IntroIllustration from "../assets/illustration-intro.svg";
 
 const Hero = () => {
   return (
-    <section className="w-full ">
+    <section className="w-full py-8 ">
       {/* <div className="bg-[hero-pattern]"></div> */}
-      <div className="flex md:mx-[10%] mx-[5%] md:flex-row flex-col md:items-center">
-        <div className="">
-          <h1 className="font-bold md:text-5xl text-3xl ">
+      <div className="flex flex-col-reverse md:mx-[10%] mx-[5%] md:flex-row md:items-center">
+        <div className="text-center md:text-left">
+          <h1 className="md:text-5xl text-4xl">
             Bring everyone together to build better products.
           </h1>
-          <p className="py-4 md:w-[75%]">
+          <p className="py-6 md:w-[70%] text-lg md:text-base">
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
-          <button className="mt-4">Get Started</button>
+          <button>Get Started</button>
         </div>
-        <img className="max-w-[100%]" src={IntroIllustration} alt="" />
+        <img className="w-[100%]" src={IntroIllustration} alt="" />
       </div>
     </section>
   );
