@@ -11,18 +11,18 @@ const Header = () => {
   };
   return (
     <header className="w-screen h-[100px] relative z-10">
-      <div className="md:px-[10%] px-[5%] flex items-center justify-between h-full w-full">
+      <div className="lg:px-[10%] px-[5%] flex items-center justify-between h-full w-full">
         <img src={Logo} alt="" />
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden lg:flex gap-8">
           <li className="text-darkBlue cursor-pointer">Pricing</li>
           <li className="text-darkBlue cursor-pointer">Product</li>
           <li className="text-darkBlue cursor-pointer">About Us</li>
           <li className="text-darkBlue cursor-pointer">Careers</li>
           <li className="text-darkBlue cursor-pointer">Community</li>
         </ul>
-        <button className="hidden md:flex">Get Started</button>
+        <button className="hidden lg:flex">Get Started</button>
         <div
-          className="md:hidden flex items-center cursor-pointer"
+          className="lg:hidden flex items-center cursor-pointer"
           onClick={ToggleNav}
         >
           {nav ? <img src={Close} alt="" /> : <img src={Hamburger} alt="" />}

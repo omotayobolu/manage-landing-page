@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Manage from "./components/Manage";
+import Testimonies from "./components/Testimonies";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Header />
       <Hero />
       <Manage />
+      <Testimonies />
     </div>
   );
 }

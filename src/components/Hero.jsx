@@ -6,12 +6,12 @@ const Hero = () => {
   return (
     <section className="w-full py-8 ">
       {/* <div className="bg-[hero-pattern]"></div> */}
-      <div className="flex flex-col-reverse md:mx-[10%] mx-[5%] md:flex-row md:items-center">
-        <div className="text-center md:text-left">
-          <h1 className="md:text-5xl text-4xl">
+      <div className="flex flex-col-reverse lg:mx-[10%] mx-[5%] lg:flex-row lg:items-center">
+        <div className="text-center lg:text-left">
+          <h1 className="lg:text-5xl text-4xl">
             Bring everyone together to build better products.
           </h1>
-          <p className="py-6 md:w-[70%] text-lg md:text-base">
+          <p className="py-6 lg:w-[70%] text-lg lg:text-base">
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
