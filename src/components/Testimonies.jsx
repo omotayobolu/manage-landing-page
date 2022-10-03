@@ -1,12 +1,10 @@
-import React from "react";
-
 import TestimonialsData from "../data/TestimonialsData";
 import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const Testimonies = () => {
   return (
-    <section className="w-full py-8">
+    <section className="w-full pt-8">
       <div>
         <h2 className="relative text-3xl md:text-4xl text-center">
           What they've said
@@ -46,6 +44,18 @@ const Testimonies = () => {
       </div>
       <div className="text-center">
         <button>Get Started</button>
+      </div>
+      <div className="bg-brightRed mt-[7rem]">
+        <div className="lg:mx-[10%] mx-[5%] py-16 h-full flex lg:flex-row flex-col lg:text-left text-center justify-between">
+          <h2 className="text-white text-4xl lg:font-bold font-medium lg:w-[50%] w-full">
+            Simplify how your team works today.
+          </h2>
+          <div>
+            <button className=" bg-white text-brightRed mt-4 lg:mx-0 ">
+              Get Started
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

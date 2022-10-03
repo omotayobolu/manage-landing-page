@@ -2,11 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      // backgroundImage: {
-      //   "hero-pattern": "url('/src/assets/bg-tablet-pattern.svg')",
-      // },
-    },
+    extend: {},
     colors: {
       brightRed: "hsl(12, 88%, 59%)",
       darkBlue: "hsl(228, 39%, 23%)",
