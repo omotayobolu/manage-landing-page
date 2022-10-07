@@ -23,7 +23,7 @@
   }
 
   button {
-    @apply bg-brightRed  text-sm text-white border-none rounded-3xl py-3 px-6 tracking-wide cursor-pointer drop-shadow-lg hover:opacity-70;
+    @apply bg-brightRed  text-sm text-white border-none rounded-3xl py-3 px-6 tracking-wide cursor-pointer drop-shadow-3xl hover:opacity-70;
   }
 
   footer ul li {
@@ -33,6 +33,11 @@
 
   footer img {
     @apply cursor-pointer;
+  }
+
+  .swiper-pagination-bullet-active {
+    border-color: hsl(12, 88%, 59%) !important;
+    opacity: 1;
   }
 }
 

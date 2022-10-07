@@ -1,6 +1,9 @@
 import TestimonialsData from "../data/TestimonialsData";
-import "@splidejs/react-splide/css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Testimonies = () => {
   return (
@@ -9,28 +12,29 @@ const Testimonies = () => {
         <h2 className="relative text-3xl md:text-4xl text-center">
           What they've said
         </h2>
-        <Splide
-          options={{
-            perPage: 3,
-            arrows: false,
-            pagination: false,
-            gap: "1rem",
-            breakpoints: {
-              992: {
-                perPage: 2,
-                pagination: true,
-              },
-              768: {
-                perPage: 1,
-                pagination: true,
-              },
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={50}
+          pagination={{
+            clickable: true,
+            el: ".my-custom-pagination-div",
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            320: {
+              slidesPerView: 1,
             },
           }}
-          className="flex my-12 w-full lg:mx-0 mx-[5%]"
+          className="flex flex-row my-12 w-full lg:mx-0 mx-[5%]"
         >
           {TestimonialsData.map((item) => (
-            <SplideSlide
-              className="relative mt-12  z-10 bg-veryLightGray text-center p-6"
+            <SwiperSlide
+              className="relative mt-12 h-[200px] max-h-full z-10 bg-veryLightGray text-center py-6 px-10"
               key={item.id}
             >
               <div className="absolute z-20 left-[45%] top-[-20%] w-16">
@@ -38,11 +42,12 @@ const Testimonies = () => {
               </div>
               <h5 className="py-4">{item.name}</h5>
               <p className="text-sm">{item.testimony}</p>
-            </SplideSlide>
+            </SwiperSlide>
           ))}
-        </Splide>
+        </Swiper>
       </div>
-      <div className="text-center">
+      <div className="my-custom-pagination-div relative flex justify-center items-center mt-[-1rem]"></div>
+      <div className="text-center mt-4">
         <button>Get Started</button>
       </div>
       <div className="bg-brightRed mt-[7rem]">

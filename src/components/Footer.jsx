@@ -101,7 +101,9 @@ const Footer = () => {
                 Please insert a valid email
               </p>
             )}
-            <button disabled={!validEmail}>Go</button>
+            <button className="w-full" disabled={!validEmail}>
+              Go
+            </button>
           </form>
         </div>
         <p className="absolute right-0 bottom-[4rem] text-xs opacity-90 ">
