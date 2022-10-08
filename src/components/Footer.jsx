@@ -6,21 +6,27 @@ import Twitter from "../assets/icon-twitter.svg";
 import Pintrest from "../assets/icon-pinterest.svg";
 import Instagram from "../assets/icon-instagram.svg";
 
-const EMAIL_REGEX =
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 const Footer = () => {
   const [email, setEmail] = useState("");
-  const [validEmail, setValidEmail] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
 
-  useEffect(() => {
-    const confirm = EMAIL_REGEX.test(email);
-    setValidEmail(confirm);
-  }, [email]);
+  const validEmail = email.includes("@");
+
+  let formIsValid = false;
+
+  if (validEmail && emailFocus) {
+    formIsValid = true;
+  }
 
   const handleSubmit = (e) => {
+    setEmailFocus(true);
     e.preventDefault();
+
+    if (!validEmail) {
+      return;
+    }
+    setEmail("");
+    setEmailFocus(false);
   };
 
   return (
@@ -82,7 +88,7 @@ const Footer = () => {
           >
             <input
               className={`text-base border text-darkBlue rounded-3xl ${
-                !validEmail && emailFocus
+                !validEmail
                   ? "text-brightRed border-2 border-solid border-brightRed"
                   : null
               }  focus:outline-none py-2 px-4 placeholder-darkGrayishBlue placeholder:text-sm`}
@@ -93,7 +99,7 @@ const Footer = () => {
               onFocus={() => setEmailFocus(true)}
               onBlur={() => setEmailFocus(false)}
             />
-            {!validEmail && emailFocus && (
+            {!validEmail && (
               <p
                 id="error"
                 className="absolute bottom-[-40%] text-sm italic text-brightRed"
@@ -101,7 +107,7 @@ const Footer = () => {
                 Please insert a valid email
               </p>
             )}
-            <button className="w-full" disabled={!validEmail}>
+            <button className="w-full" disabled={!formIsValid}>
               Go
             </button>
           </form>
