@@ -9,7 +9,7 @@ const Header = () => {
     setNav(!nav);
   };
   return (
-    <header className="w-screen h-[100px] relative z-10">
+    <header className="w-screen h-[100px] relative">
       <div className="lg:px-[10%] px-[5%] flex items-center justify-between h-full w-full">
         <svg xmlns="http://www.w3.org/2000/svg" width="146" height="24">
           <g fill="none" fill-rule="evenodd">

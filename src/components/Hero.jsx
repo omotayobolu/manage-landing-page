@@ -5,7 +5,6 @@ import IntroIllustration from "../assets/illustration-intro.svg";
 const Hero = () => {
   return (
     <section className="w-full py-8 ">
-      {/* <div className="bg-[hero-pattern]"></div> */}
       <div className="flex flex-col-reverse lg:mx-[10%] mx-[5%] lg:flex-row lg:items-center">
         <div className="text-center lg:text-left">
           <h1 className="lg:text-5xl text-4xl">

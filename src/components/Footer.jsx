@@ -106,7 +106,7 @@ const Footer = () => {
             </button>
           </form>
         </div>
-        <p className="absolute right-0 bottom-[4rem] text-xs opacity-90 ">
+        <p className="absolute right-0 bottom-[4rem] mx-[17%] sm:mx-0 text-xs opacity-90 ">
           Copyright 2022. All Rights Reserved
         </p>
       </div>
